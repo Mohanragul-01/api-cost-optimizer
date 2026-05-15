@@ -4,8 +4,6 @@ Project that monitors multi-LLM API usage in real time,
 controls costs using token estimation, priority queuing, and circuit breaking,
 and surfaces AI-generated routing recommendations via an embedded Llama 3.3 analysis layer.
 
-![Dashboard demo](api-cost-optimizer.mp4)
-
 ---
 
 ## What It Does
