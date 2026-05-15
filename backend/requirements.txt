@@ -1,0 +1,8 @@
+flask
+flask-cors
+tiktoken
+faker
+APScheduler
+requests
+python-dotenv
+gunicorn

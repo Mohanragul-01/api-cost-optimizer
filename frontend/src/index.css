@@ -1,0 +1,7 @@
+/* File: index.css
+   Purpose: Tailwind base imports — required for all utility classes to work
+   Step: Step-7 */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
