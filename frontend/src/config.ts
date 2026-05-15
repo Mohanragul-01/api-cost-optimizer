@@ -5,5 +5,5 @@
 // WHY: Vite exposes only variables prefixed with VITE_ to the browser bundle.
 // In local dev, VITE_API_BASE is not set so we fall back to localhost.
 // On Vercel, set VITE_API_BASE=https://your-backend.onrender.com in project settings.
-const API_BASE = import.meta.env.VITE_API_BASE ?? "http://localhost:5000"
+const API_BASE = import.meta.env.VITE_API_BASE || "http://localhost:5000"
 export default API_BASE
