@@ -63,6 +63,17 @@ def seed(conn: sqlite3.Connection, count: int = SEED_ROW_COUNT) -> None:
     print(f"✅ Seeded {count} rows into {DB_PATH}")
 
 
+def seed_if_empty(conn: sqlite3.Connection) -> None:
+    existing = conn.execute(
+        "SELECT COUNT(*) FROM calls"
+    ).fetchone()[0]
+
+    if existing == 0:
+        seed(conn)
+    else:
+        print("Database already seeded")
+
+
 if __name__ == "__main__":
     conn = get_connection()
     create_tables(conn)   # safe to call twice — uses IF NOT EXISTS
