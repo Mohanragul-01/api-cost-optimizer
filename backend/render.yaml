@@ -1,0 +1,16 @@
+# File: render.yaml
+# Purpose: Tells Render how to build and run the Flask backend
+
+services:
+  - type: web
+    name: api-cost-optimizer-backend
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:create_app()
+    envVars:
+      - key: ALLOWED_ORIGIN
+        value: https://your-app.vercel.app   # replace after Vercel deploy
+      - key: OPENROUTER_API_KEY
+        sync: false                          # set manually in Render dashboard
+      - key: FLASK_DEBUG
+        value: "false"
