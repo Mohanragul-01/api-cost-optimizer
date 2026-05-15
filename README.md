@@ -36,6 +36,7 @@ solves that with four systems working together:
 
 ## Architecture
 
+```text
 Seed script (mock logs)
 ↓
 Flask Backend
@@ -54,11 +55,13 @@ React + TypeScript Dashboard
 ├── Call Log Table — paginated, sortable by timestamp
 ├── Circuit Breaker Panel — green / yellow / red per provider, pulses when OPEN
 └── AI Recommendation Card — triggered on demand, shows suggestions + savings
+```
 
 ---
 
 ## Project Structure
 
+```text
 root/
 ├── backend/
 │ ├── app.py # Flask entry point, CORS, blueprint registration
@@ -90,6 +93,7 @@ root/
 │ ├── vercel.json # Vercel deployment config
 │ └── tailwind.config.js
 └── README.md
+```
 
 ---
 
